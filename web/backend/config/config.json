@@ -1,0 +1,22 @@
+{
+    "development": {
+      "dialect": "sqlite",
+      "storage": "iwdb.db",
+      "logging": false
+    },
+    "test": {
+      "database": "",
+      "username": "",
+      "password": "",
+      "host": "",
+      "dialect": "postgres"
+    },
+    "production": {
+      "database": "",
+      "username": "",
+      "password": "",
+      "host": "",
+      "dialect": "postgres",
+      "logging": false
+    }
+  }
