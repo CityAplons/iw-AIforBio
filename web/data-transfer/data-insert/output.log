@@ -1,0 +1,436 @@
+1A43_A:E-159->D: Position overflow! 
+1A43_A:W-184->A: Position overflow! 
+1A43_A:R-167->A: Position overflow! 
+1A43_A:C-218->S: Position overflow! 
+1AG2_A:T-183->A: Position overflow! 
+1AG2_A:T-190->V: Position overflow! 
+1AG2_A:V-180->I: Position overflow! 
+1AG2_A:E-200->K: Position overflow! 
+1A43_A:G-156->A: Position overflow! 
+1AG2_A:R-208->H: Position overflow! 
+1AG2_A:V-210->I: Position overflow! 
+1AG2_A:Q-217->R: Position overflow! 
+1AG2_A:M-129->V: Position overflow! 
+1AG2_A:F-198->S: Position overflow! 
+1AG2_A:F-175->W: Position overflow! 
+1AMQ_A:C-82->A: Position not equal to wildtype! 
+1AMQ_A:C-82->S: Position not equal to wildtype! 
+1AMQ_A:C-191->F: Position not equal to wildtype! 
+1AMQ_A:C-191->G: Position not equal to wildtype! 
+1AMQ_A:C-191->S: Position not equal to wildtype! 
+1AMQ_A:C-191->Y: Position not equal to wildtype! 
+1AMQ_A:C-192->A: Position not equal to wildtype! 
+1AMQ_A:C-192->S: Position not equal to wildtype! 
+1AMQ_A:C-401->S: Position overflow! 
+1AMQ_A:C-191->W: Position not equal to wildtype! 
+1AMQ_A:C-191->R: Position not equal to wildtype! 
+1AMQ_A:C-401->A: Position overflow! 
+1AMQ_A:C-270->A: Position not equal to wildtype! 
+1AMQ_A:C-191->A: Position not equal to wildtype! 
+1B26_A:R-190->A: Position not equal to wildtype! 
+1B26_A:K-193->A: Position not equal to wildtype! 
+1BLC_A:D-179->N: Position not equal to wildtype! 
+1B26_A:E-231->A: Position not equal to wildtype! 
+1BNI_A:R-110->A: Position overflow! 
+1CAH_A:W-5->F: Position not equal to wildtype! 
+1CAH_A:C-206->S: Position not equal to wildtype! 
+1CEY_A:D-13->A: Position not equal to wildtype! 
+1CEY_A:F-14->N: Position not equal to wildtype! 
+1CEY_A:A-48->G: Position not equal to wildtype! 
+1CEY_A:D-57->A: Position not equal to wildtype! 
+1CEY_A:A-74->G: Position not equal to wildtype! 
+1CEY_A:A-77->G: Position not equal to wildtype! 
+1CEY_A:A-80->G: Position not equal to wildtype! 
+1CEY_A:A-88->G: Position not equal to wildtype! 
+1CEY_A:A-90->G: Position not equal to wildtype! 
+1CEY_A:A-99->G: Position not equal to wildtype! 
+1CEY_A:A-101->G: Position not equal to wildtype! 
+1CEY_A:A-114->G: Position not equal to wildtype! 
+1C9O_A:L-66->E: Position overflow! 
+1CUN_A:Q-115->G: Position not equal to wildtype! 
+1CUN_A:F-117->L: Position not equal to wildtype! 
+1CUN_A:A-119->G: Position not equal to wildtype! 
+1CUN_A:A-126->G: Position not equal to wildtype! 
+1CUN_A:I-128->A: Position not equal to wildtype! 
+1CUN_A:I-128->V: Position not equal to wildtype! 
+1CUN_A:K-152->A: Position not equal to wildtype! 
+1CUN_A:K-152->G: Position not equal to wildtype! 
+1CUN_A:A-156->G: Position not equal to wildtype! 
+1CUN_A:F-157->L: Position not equal to wildtype! 
+1CUN_A:V-163->A: Position not equal to wildtype! 
+1CUN_A:V-163->G: Position not equal to wildtype! 
+1CUN_A:H-164->A: Position not equal to wildtype! 
+1CUN_A:V-171->A: Position not equal to wildtype! 
+1CUN_A:A-173->G: Position not equal to wildtype! 
+1CUN_A:A-191->G: Position not equal to wildtype! 
+1CUN_A:M-193->A: Position not equal to wildtype! 
+1CUN_A:L-196->A: Position not equal to wildtype! 
+1CUN_A:G-198->A: Position not equal to wildtype! 
+1CUN_A:S-201->A: Position not equal to wildtype! 
+1CUN_A:S-201->G: Position not equal to wildtype! 
+1CUN_A:L-203->A: Position not equal to wildtype! 
+1CUN_A:A-212->G: Position not equal to wildtype! 
+1CUN_A:L-214->A: Position overflow! 
+1CUN_A:Q-115->A: Position not equal to wildtype! 
+1FNA_A:L-8->A: Position not equal to wildtype! 
+1FNA_A:V-10->A: Position not equal to wildtype! 
+1FNA_A:A-13->G: Position not equal to wildtype! 
+1FNA_A:L-18->A: Position not equal to wildtype! 
+1FNA_A:I-20->V: Position not equal to wildtype! 
+1FNA_A:W-22->F: Position not equal to wildtype! 
+1FNA_A:V-29->A: Position not equal to wildtype! 
+1FNA_A:Y-32->F: Position not equal to wildtype! 
+1FNA_A:Y-32->L: Position not equal to wildtype! 
+1FNA_A:I-34->A: Position not equal to wildtype! 
+1FNA_A:I-20->A: Position not equal to wildtype! 
+1FNA_A:F-48->A: Position not equal to wildtype! 
+1FNA_A:V-50->A: Position not equal to wildtype! 
+1FNA_A:A-57->G: Position not equal to wildtype! 
+1FNA_A:I-59->A: Position not equal to wildtype! 
+1FNA_A:I-59->V: Position not equal to wildtype! 
+1FNA_A:L-62->A: Position not equal to wildtype! 
+1FNA_A:Y-32->A: Position not equal to wildtype! 
+1FNA_A:I-70->A: Position not equal to wildtype! 
+1FNA_A:I-34->V: Position not equal to wildtype! 
+1FNA_A:V-72->A: Position not equal to wildtype! 
+1FNA_A:A-74->G: Position not equal to wildtype! 
+1FNA_A:S-85->A: Position not equal to wildtype! 
+1FNA_A:Y-36->A: Position not equal to wildtype! 
+1FNA_A:I-88->V: Position not equal to wildtype! 
+1FNA_A:I-90->A: Position not equal to wildtype! 
+1FNA_A:I-70->V: Position not equal to wildtype! 
+1FNA_A:Y-92->A: Position overflow! 
+1FNA_A:Y-92->F: Position overflow! 
+1FTG_A:L-6->A: Position not equal to wildtype! 
+1FTG_A:E-20->K: Position not equal to wildtype! 
+1FNA_A:I-88->A: Position not equal to wildtype! 
+1FNA_A:V-66->A: Position not equal to wildtype! 
+1FTG_A:V-31->A: Position not equal to wildtype! 
+1FNA_A:I-90->V: Position not equal to wildtype! 
+1FTG_A:D-43->A: Position not equal to wildtype! 
+1FTG_A:I-22->V: Position not equal to wildtype! 
+1FTG_A:E-61->K: Position not equal to wildtype! 
+1FTG_A:D-65->K: Position not equal to wildtype! 
+1FTG_A:E-40->K: Position not equal to wildtype! 
+1FTG_A:E-72->K: Position not equal to wildtype! 
+1FTG_A:A-84->G: Position not equal to wildtype! 
+1FTG_A:N-97->A: Position not equal to wildtype! 
+1FTG_A:Q-99->A: Position not equal to wildtype! 
+1FTG_A:I-104->V: Position not equal to wildtype! 
+1FTG_A:S-110->A: Position not equal to wildtype! 
+1FTG_A:V-117->A: Position not equal to wildtype! 
+1FTG_A:I-52->V: Position not equal to wildtype! 
+1FTG_A:D-126->K: Position not equal to wildtype! 
+1FTG_A:V-139->A: Position not equal to wildtype! 
+1FTG_A:L-143->A: Position not equal to wildtype! 
+1FTG_A:S-71->A: Position not equal to wildtype! 
+1FTG_A:D-75->K: Position not equal to wildtype! 
+1FTG_A:I-22->A: Position not equal to wildtype! 
+1FTG_A:D-150->K: Position not equal to wildtype! 
+1FTG_A:I-156->V: Position not equal to wildtype! 
+1G6N_A:S-128->A: Position not equal to wildtype! 
+1H7M_A:D-2->A: Position not equal to wildtype! 
+1H7M_A:E-6->A: Position not equal to wildtype! 
+1FTG_A:T-122->S: Position not equal to wildtype! 
+1H7M_A:D-12->A: Position not equal to wildtype! 
+1H7M_A:K-15->A: Position not equal to wildtype! 
+1FTG_A:V-160->A: Position not equal to wildtype! 
+1H7M_A:K-22->A: Position not equal to wildtype! 
+1H7M_A:K-33->A: Position not equal to wildtype! 
+1H7M_A:R-39->A: Position not equal to wildtype! 
+1H7M_A:R-42->A: Position not equal to wildtype! 
+1H7M_A:D-44->A: Position not equal to wildtype! 
+1H7M_A:K-9->A: Position not equal to wildtype! 
+1H7M_A:K-28->A: Position not equal to wildtype! 
+1H7M_A:D-48->A: Position not equal to wildtype! 
+1H7M_A:R-8->A: Position not equal to wildtype! 
+1H7M_A:K-46->A: Position not equal to wildtype! 
+1H7M_A:E-47->A: Position not equal to wildtype! 
+1H7M_A:E-50->A: Position not equal to wildtype! 
+1H7M_A:R-54->A: Position not equal to wildtype! 
+1H7M_A:E-62->A: Position not equal to wildtype! 
+1H7M_A:E-69->A: Position not equal to wildtype! 
+1H7M_A:E-90->A: Position not equal to wildtype! 
+1H7M_A:H-78->A: Position not equal to wildtype! 
+1HFZ_A:H-32->A: Position not equal to wildtype! 
+1HFZ_A:H-32->Y: Position not equal to wildtype! 
+1H7M_A:R-92->A: Position not equal to wildtype! 
+1HFZ_A:V-42->G: Position not equal to wildtype! 
+1H7M_A:R-76->A: Position not equal to wildtype! 
+1H7M_A:D-87->A: Position not equal to wildtype! 
+1HFZ_A:V-42->N: Position not equal to wildtype! 
+1HFZ_A:Q-54->A: Position not equal to wildtype! 
+1HFZ_A:I-59->W: Position not equal to wildtype! 
+1HFZ_A:Y-103->A: Position not equal to wildtype! 
+1HFZ_A:A-106->S: Position not equal to wildtype! 
+1HFZ_A:H-107->A: Position not equal to wildtype! 
+1HFZ_A:H-107->W: Position not equal to wildtype! 
+1HFZ_A:H-107->Y: Position not equal to wildtype! 
+1HFZ_A:L-110->E: Position not equal to wildtype! 
+1HFZ_A:L-110->H: Position not equal to wildtype! 
+1HFZ_A:L-110->R: Position not equal to wildtype! 
+1HFZ_A:K-114->E: Position not equal to wildtype! 
+1HFZ_A:K-114->N: Position not equal to wildtype! 
+1HFZ_A:K-114->Q: Position not equal to wildtype! 
+1HFZ_A:Q-117->A: Position not equal to wildtype! 
+1HFZ_A:W-118->H: Position not equal to wildtype! 
+1HFZ_A:W-118->Y: Position not equal to wildtype! 
+1HK0_X:V-132->A: Position not equal to wildtype! 
+1HK0_X:M-147->A: Position not equal to wildtype! 
+1HK0_X:V-170->A: Position not equal to wildtype! 
+1HMK_A:V-8->A: Position not equal to wildtype! 
+1HMK_A:L-12->A: Position not equal to wildtype! 
+1HMK_A:W-26->F: Position not equal to wildtype! 
+1HMK_A:V-27->A: Position not equal to wildtype! 
+1HMK_A:T-29->I: Position not equal to wildtype! 
+1HK0_X:Q-143->A: Position not equal to wildtype! 
+1HMK_A:A-30->I: Position not equal to wildtype! 
+1HMK_A:A-30->T: Position not equal to wildtype! 
+1HMK_A:T-33->I: Position not equal to wildtype! 
+1HMK_A:T-38->A: Position not equal to wildtype! 
+1HMK_A:I-55->V: Position not equal to wildtype! 
+1HMK_A:W-60->A: Position not equal to wildtype! 
+1HMK_A:W-60->F: Position not equal to wildtype! 
+1HMK_A:D-87->N: Position not equal to wildtype! 
+1HMK_A:V-90->A: Position not equal to wildtype! 
+1HMK_A:K-93->A: Position not equal to wildtype! 
+1HMK_A:I-95->V: Position not equal to wildtype! 
+1HMK_A:I-89->V: Position not equal to wildtype! 
+1HMK_A:Y-103->F: Position not equal to wildtype! 
+1HMK_A:T-29->V: Position not equal to wildtype! 
+1HMK_A:L-105->A: Position not equal to wildtype! 
+1HMK_A:L-110->A: Position not equal to wildtype! 
+1HMK_A:W-118->F: Position not equal to wildtype! 
+1HMK_A:L-52->A: Position not equal to wildtype! 
+1HMK_A:L-96->A: Position not equal to wildtype! 
+1HMK_A:W-104->F: Position not equal to wildtype! 
+1IET_A:D-60->R: Position not equal to wildtype! 
+1IFC_A:W-6->Y: Position not equal to wildtype! 
+1IFC_A:V-60->C: Position not equal to wildtype! 
+1IFC_A:V-60->N: Position not equal to wildtype! 
+1IFC_A:I-23->C: Position not equal to wildtype! 
+1IFC_A:L-64->G: Position not equal to wildtype! 
+1IFC_A:G-65->A: Position not equal to wildtype! 
+1IFC_A:F-68->A: Position not equal to wildtype! 
+1IFC_A:L-64->A: Position not equal to wildtype! 
+1IFC_A:F-93->A: Position not equal to wildtype! 
+1IFC_A:L-72->C: Position not equal to wildtype! 
+1IFC_A:W-82->Y: Position not equal to wildtype! 
+1IFC_A:L-89->C: Position not equal to wildtype! 
+1IFC_A:A-104->C: Position not equal to wildtype! 
+1HFZ_A:V-42->A: Position not equal to wildtype! 
+1K9Q_A:A-20->R: Position not equal to wildtype! 
+1K9Q_A:L-30->Y: Position not equal to wildtype! 
+1K9Q_A:D-34->T: Position not equal to wildtype! 
+1KCQ_A:D-187->N: Position overflow! 
+1KE4_A:Y-150->F: Position not equal to wildtype! 
+1KFW_A:N-197->K: Position not equal to wildtype! 
+1HFZ_A:W-104->Y: Position not equal to wildtype! 
+1KFW_A:G-405->Q: Position not equal to wildtype! 
+1KDX_A:Y-640->F: Position overflow! 
+1LVE_A:L-27C->N: Position overflow! 
+1LVE_A:L-27C->Q: Position overflow! 
+1LVE_A:V-27B->L: Position overflow! 
+1LVE_A:Y-27D->D: Position overflow! 
+1LVE_A:N-28->F: Position not equal to wildtype! 
+1LVE_A:K-30->T: Position not equal to wildtype! 
+1LVE_A:Q-38->N: Position not equal to wildtype! 
+1LVE_A:K-39->T: Position not equal to wildtype! 
+1LVE_A:Q-89->H: Position not equal to wildtype! 
+1H7M_A:R-21->A: Position not equal to wildtype! 
+1LVE_A:T-94->H: Position not equal to wildtype! 
+1LVE_A:K-30->R: Position not equal to wildtype! 
+1LVE_A:S-97->T: Position not equal to wildtype! 
+1LVE_A:I-106->L: Position not equal to wildtype! 
+1LVE_A:Y-96->Q: Position not equal to wildtype! 
+1LVE_A:S-29->N: Position not equal to wildtype! 
+1LVE_A:Q-89->N: Position not equal to wildtype! 
+1KCQ_A:D-187->Y: Position overflow! 
+1MBG_A:V-103->A: Position overflow! 
+1MBG_A:V-103->I: Position overflow! 
+1LZ1_A:V-130->A: Position overflow! 
+1MBG_A:V-103->L: Position overflow! 
+1MJC_A:F-18->L: Position not equal to wildtype! 
+1MJC_A:F-18->S: Position not equal to wildtype! 
+1MJC_A:F-20->L: Position not equal to wildtype! 
+1MJC_A:F-31->L: Position not equal to wildtype! 
+1MJC_A:F-31->S: Position not equal to wildtype! 
+1MJC_A:Y-42->W: Position not equal to wildtype! 
+1MJC_A:S-52->W: Position not equal to wildtype! 
+1MJC_A:T-68->W: Position not equal to wildtype! 
+1MSI_A:R-23->A: Position not equal to wildtype! 
+1MSI_A:E-25->A: Position not equal to wildtype! 
+1MSI_A:D-36->A: Position not equal to wildtype! 
+1MSI_A:R-39->A: Position not equal to wildtype! 
+1MSI_A:R-47->A: Position not equal to wildtype! 
+1N0J_A:Q-143->N: Position not equal to wildtype! 
+1MSI_A:D-58->N: Position not equal to wildtype! 
+1N0J_A:Y-34->F: Position not equal to wildtype! 
+1N0J_A:I-58->T: Position not equal to wildtype! 
+1PDO_A:W-12->F: Position not equal to wildtype! 
+1PDO_A:W-33->F: Position not equal to wildtype! 
+1PDO_A:W-69->F: Position not equal to wildtype! 
+1RG8_A:H-21->Y: Position not equal to wildtype! 
+1RG8_A:C-16->S: Position not equal to wildtype! 
+1RG8_A:L-73->V: Position not equal to wildtype! 
+1RG8_A:C-83->S: Position not equal to wildtype! 
+1RG8_A:H-93->A: Position not equal to wildtype! 
+1RG8_A:G-62->N: Position not equal to wildtype! 
+1RG8_A:L-44->F: Position not equal to wildtype! 
+1RG8_A:G-62->A: Position not equal to wildtype! 
+1RG8_A:H-93->G: Position not equal to wildtype! 
+1RG8_A:H-93->N: Position not equal to wildtype! 
+1RG8_A:H-102->Y: Position not equal to wildtype! 
+1RG8_A:A-103->G: Position not equal to wildtype! 
+1RG8_A:V-109->L: Position not equal to wildtype! 
+1RG8_A:C-117->S: Position not equal to wildtype! 
+1RG8_A:F-108->Y: Position not equal to wildtype! 
+1RG8_A:N-106->G: Position not equal to wildtype! 
+1RG8_A:V-109->I: Position not equal to wildtype! 
+1MJC_A:F-20->S: Position not equal to wildtype! 
+1SAK_A:E-326->A: Position overflow! 
+1SAK_A:F-328->A: Position overflow! 
+1SAK_A:F-328->L: Position overflow! 
+1SAK_A:T-329->A: Position overflow! 
+1SAK_A:L-330->F: Position overflow! 
+1SAK_A:Q-331->A: Position overflow! 
+1SAK_A:I-332->V: Position overflow! 
+1SAK_A:R-333->A: Position overflow! 
+1SAK_A:R-335->A: Position overflow! 
+1SAK_A:R-337->A: Position overflow! 
+1SAK_A:F-338->A: Position overflow! 
+1SAK_A:E-339->A: Position overflow! 
+1SAK_A:M-340->A: Position overflow! 
+1SAK_A:M-340->I: Position overflow! 
+1SAK_A:F-341->I: Position overflow! 
+1SAK_A:F-341->L: Position overflow! 
+1SAK_A:R-342->A: Position overflow! 
+1SAK_A:N-345->A: Position overflow! 
+1SAK_A:E-346->A: Position overflow! 
+1SAK_A:A-347->G: Position overflow! 
+1SAK_A:L-344->I: Position overflow! 
+1SAK_A:L-350->A: Position overflow! 
+1SAK_A:K-351->A: Position overflow! 
+1SAK_A:D-352->A: Position overflow! 
+1SHF_A:E-107->A: Position overflow! 
+1SAK_A:E-343->A: Position overflow! 
+1SAK_A:L-344->F: Position overflow! 
+1SAK_A:E-349->A: Position overflow! 
+1SHF_A:E-107->D: Position overflow! 
+1SHF_A:E-107->F: Position overflow! 
+1SHF_A:E-107->G: Position overflow! 
+1SHF_A:E-107->H: Position overflow! 
+1SHF_A:E-107->I: Position overflow! 
+1SHF_A:E-107->K: Position overflow! 
+1SHF_A:E-107->L: Position overflow! 
+1SHF_A:E-107->Q: Position overflow! 
+1SHF_A:E-107->R: Position overflow! 
+1SHF_A:E-107->S: Position overflow! 
+1SHF_A:E-107->T: Position overflow! 
+1SHF_A:E-107->V: Position overflow! 
+1SHF_A:E-107->Y: Position overflow! 
+1SHF_A:S-124->A: Position overflow! 
+1SHF_A:S-124->D: Position overflow! 
+1SHF_A:I-111->L: Position overflow! 
+1SHF_A:I-111->V: Position overflow! 
+1SHF_A:I-111->A: Position overflow! 
+1SHF_A:S-124->F: Position overflow! 
+1SHF_A:S-124->G: Position overflow! 
+1SHF_A:S-124->H: Position overflow! 
+1SHF_A:S-124->I: Position overflow! 
+1SHF_A:S-124->K: Position overflow! 
+1SHF_A:S-124->L: Position overflow! 
+1SHF_A:S-124->N: Position overflow! 
+1SHF_A:S-124->R: Position overflow! 
+1SHF_A:S-124->T: Position overflow! 
+1SHF_A:S-124->V: Position overflow! 
+1SHF_A:S-124->Y: Position overflow! 
+1SHF_A:T-127->A: Position overflow! 
+1SHF_A:G-128->A: Position overflow! 
+1SHF_A:V-138->A: Position overflow! 
+1SHF_A:V-138->G: Position overflow! 
+1SHF_A:V-138->M: Position overflow! 
+1SHF_A:V-138->T: Position overflow! 
+1TEN_A:I-809->A: Position overflow! 
+1TEN_A:I-809->V: Position overflow! 
+1TEN_A:V-811->A: Position overflow! 
+1TEN_A:A-819->G: Position overflow! 
+1TEN_A:I-821->A: Position overflow! 
+1TEN_A:I-821->V: Position overflow! 
+1TEN_A:I-830->A: Position overflow! 
+1TEN_A:I-830->V: Position overflow! 
+1TEN_A:I-833->A: Position overflow! 
+1TEN_A:I-833->V: Position overflow! 
+1TEN_A:L-835->A: Position overflow! 
+1TEN_A:Y-837->A: Position overflow! 
+1TEN_A:I-849->A: Position overflow! 
+1TEN_A:I-860->A: Position overflow! 
+1TEN_A:I-860->V: Position overflow! 
+1TEN_A:Y-858->A: Position overflow! 
+1TEN_A:Y-858->G: Position overflow! 
+1TEN_A:L-851->A: Position overflow! 
+1TEN_A:L-863->A: Position overflow! 
+1TEN_A:T-867->S: Position overflow! 
+1TEN_A:Y-869->F: Position overflow! 
+1TEN_A:V-871->A: Position overflow! 
+1TEN_A:L-873->A: Position overflow! 
+1TEN_A:S-875->A: Position overflow! 
+1TEN_A:S-882->A: Position overflow! 
+1TEN_A:A-885->G: Position overflow! 
+1TEN_A:E-887->A: Position overflow! 
+1TEN_A:E-887->G: Position overflow! 
+1TIT_A:I-23->A: Position not equal to wildtype! 
+1TIT_A:L-41->A: Position not equal to wildtype! 
+1TIT_A:L-58->A: Position not equal to wildtype! 
+1TIT_A:L-60->A: Position not equal to wildtype! 
+1TIT_A:C-63->S: Position not equal to wildtype! 
+1TIT_A:F-73->L: Position not equal to wildtype! 
+1TIT_A:V-86->A: Position not equal to wildtype! 
+1TPK_A:V-65->A: Position not equal to wildtype! 
+1TPK_A:V-65->I: Position not equal to wildtype! 
+1TPK_A:V-65->L: Position not equal to wildtype! 
+1TPK_A:V-65->M: Position not equal to wildtype! 
+1TPK_A:V-65->S: Position not equal to wildtype! 
+1TPK_A:V-65->T: Position not equal to wildtype! 
+1TYV_A:G-177->R: Position not equal to wildtype! 
+1TYV_A:T-235->I: Position not equal to wildtype! 
+1TYV_A:G-244->R: Position not equal to wildtype! 
+1TYV_A:R-285->K: Position not equal to wildtype! 
+1TYV_A:E-309->V: Position not equal to wildtype! 
+1YU5_X:H-41->Y: Position not equal to wildtype! 
+1ZG4_A:C-77->S: Position not equal to wildtype! 
+1ZG4_A:W-290->F: Position overflow! 
+No data found with the PDB: 2A01_A1SAK_A:E-336->A: Position overflow! 
+2H61_A:L-3->A: Position not equal to wildtype! 
+2H61_A:L-3->S: Position not equal to wildtype! 
+2H61_A:M-7->A: Position not equal to wildtype! 
+2H61_A:I-11->A: Position not equal to wildtype! 
+2H61_A:F-14->A: Position not equal to wildtype! 
+2HPR_A:S-46->D: Position not equal to wildtype! 
+2IMM_A:F-32->Y: Position not equal to wildtype! 
+2IMM_A:T-63->S: Position not equal to wildtype! 
+2IMM_A:Q-79->E: Position not equal to wildtype! 
+2IMM_A:N-90->Q: Position not equal to wildtype! 
+2IMM_A:A-100->G: Position not equal to wildtype! 
+2IMM_A:L-106->I: Position not equal to wildtype! 
+2OCJ_A:R-175->H: Position not equal to wildtype! 
+2OCJ_A:C-242->S: Position overflow! 
+2OCJ_A:R-248->Q: Position overflow! 
+2OCJ_A:R-249->S: Position overflow! 
+2OCJ_A:R-273->H: Position overflow! 
+2TRT_A:R-128->E: Position not equal to wildtype! 
+3GLY_A:G-137->A: Position not equal to wildtype! 
+3GLY_A:G-139->A: Position not equal to wildtype! 
+3GLY_A:G-251->A: Position not equal to wildtype! 
+3GLY_A:G-383->A: Position not equal to wildtype! 
+3PGK_A:Y-48->W: Position not equal to wildtype! 
+3PGK_A:Y-122->W: Position not equal to wildtype! 
+3PGK_A:F-194->W: Position not equal to wildtype! 
+3PGK_A:W-308->F: Position not equal to wildtype! 
+3PGK_A:W-308->Y: Position not equal to wildtype! 
+3PGK_A:W-333->F: Position not equal to wildtype! 
+3PGK_A:W-333->Y: Position not equal to wildtype! 
+3SIL_A:A-69->V: Position not equal to wildtype! 
+3PGK_A:L-399->W: Position not equal to wildtype! 
+3SIL_A:A-53->L: Position not equal to wildtype! 
+3PGK_A:H-388->Q: Position not equal to wildtype! 

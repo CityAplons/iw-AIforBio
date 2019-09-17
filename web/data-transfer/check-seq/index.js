@@ -30,7 +30,7 @@ db.all(sql,[],(err, rows ) => {
     rows.forEach(row => {
         let seq_l = row.sequence.length;
         if(seq_l > row.position) {
-            if(row.sequence[row.position] !== row.wildtype){
+            if(row.sequence[row.position-1] === row.wildtype){
                 working.push(row.id);
             } else {
                 logStream.write(`${row.id}: Position not equal to wildtype! \n`);
