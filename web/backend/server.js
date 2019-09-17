@@ -6,8 +6,26 @@ const http = require('http');
 const fs = require('fs');
 
 const app = express();
+
 var server = http.createServer(app);
 app.set('port', 80);
+
+//Static files
+app.use(express.static('public'));
+
+//Set handlebars
+app.set('views', './views')
+app.engine('hbs', exphbs({
+    extname: '.hbs',
+    defaultLayout: "",
+    layoutsDir: "",
+}));
+app.set('view engine', '.hbs');
+
+//Core router
+const coreRouter = require('./v1/core');
+app.use('/', coreRouter);
+
 /*
 let passport   = require('passport');
 let session    = require('express-session');
@@ -20,16 +38,6 @@ app.use(bodyParser.json());
 app.use(session({ secret: 'tusurNikMikh',resave: true, saveUninitialized:true}));
 app.use(passport.initialize());
 app.use(passport.session());
-
-//Static files
-app.use(express.static('public'));
-
-//Set handlebars
-app.set('views', './views')
-app.engine('hbs', exphbs({
-    extname: '.hbs'
-}));
-app.set('view engine', '.hbs');
 
 let users = {};
 */
