@@ -1,7 +1,7 @@
 {
     "development": {
       "dialect": "sqlite",
-      "storage": "iwdb.db",
+      "storage": "iwdb.sqlite",
       "logging": false
     },
     "test": {

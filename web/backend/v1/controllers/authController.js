@@ -1,17 +1,17 @@
-exports.signup = function(req, res) {
+/*exports.signup = function(req, res) {
      res.render('signup');
-}
+}*/
 exports.signin = function(req, res) {
-    res.render('signin');
+    res.render('services');
 }
-exports.dashboard = function(req, res) {
-    res.render('dashboard',{
+exports.analysis = function(req, res) {
+    res.render('analysis',{
         username: req.user.username,
         id: req.user.id
     });
 }
 exports.logout = function(req, res) {
     req.session.destroy(function(err) {
-        res.redirect('/');
+        res.redirect('/services');
     });
 }

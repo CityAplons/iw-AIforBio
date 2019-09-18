@@ -5,7 +5,7 @@ exports.about = function(req, res) {
    res.render('about');
 }
 exports.services = function(req, res) {
-    res.render('services');
+    res.render('services', {error: req.flash('error')});
  }
 /*
 exports.dashboard = function(req, res) {

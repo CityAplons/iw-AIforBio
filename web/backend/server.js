@@ -2,16 +2,33 @@
 const chalk = require('chalk');
 const express = require('express');
 const exphbs = require('express-handlebars');
+const flash = require('connect-flash');
 const http = require('http');
 const fs = require('fs');
 
 const app = express();
 
 var server = http.createServer(app);
-app.set('port', 80);
+app.set('port', 3000);
+
+let passport   = require('passport');
+let session    = require('express-session');
+let bodyParser = require('body-parser');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.json());
+
+//Passport config
+app.use(session({ secret: 'skoltech5iw',resave: true, saveUninitialized:true}));
+app.use(passport.initialize());
+app.use(passport.session());
+
+let users = {};
 
 //Static files
 app.use(express.static('public'));
+
+app.use(flash());
 
 //Set handlebars
 app.set('views', './views')
@@ -26,21 +43,24 @@ app.set('view engine', '.hbs');
 const coreRouter = require('./v1/core');
 app.use('/', coreRouter);
 
-/*
-let passport   = require('passport');
-let session    = require('express-session');
-let bodyParser = require('body-parser');
+//Auth router
+const authRouter = require('./v1/auth');
+app.use('/', authRouter);
 
-app.use(bodyParser.urlencoded({ extended: true }));
-app.use(bodyParser.json());
+//Database init
+//Models
+var models = require("./models");
+ 
+//Sync Database
+models.sequelize.sync().then(function() {
+    console.log('Database was initializated successfully')
+}).catch(function(err) {
+    console.log(err, "Something went wrong with database initialization!")
+});
 
-//Passport config
-app.use(session({ secret: 'tusurNikMikh',resave: true, saveUninitialized:true}));
-app.use(passport.initialize());
-app.use(passport.session());
+//load passport strategies
+require('./config/passport/passport.js')(passport, models.user);
 
-let users = {};
-*/
 //server init
 app.listen(app.get('port'), () => {
     console.log(chalk.yellow(`Server alive on port: ${app.get('port')}\nServer PID: ${process.pid}\nUse "kill [pid]" to terminate server!`));
