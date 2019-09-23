@@ -3,8 +3,9 @@ const chalk = require('chalk');
 const express = require('express');
 const exphbs = require('express-handlebars');
 const flash = require('connect-flash');
+const compression = require('compression');
+const helmet = require('helmet');
 const http = require('http');
-const fs = require('fs');
 
 const app = express();
 
@@ -14,6 +15,9 @@ app.set('port', 3000);
 let passport   = require('passport');
 let session    = require('express-session');
 let bodyParser = require('body-parser');
+
+app.use(helmet());
+app.use(compression());
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());

@@ -27,6 +27,24 @@
 	<meta property="og:article:published_time" content="2019-09-16T00:00:00+0200">
 	<meta name="robots" content="noindex,nofollow">
 	<link rel="canonical" href="http://protanalytics.xyz/services/">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.19.1/jquery.validate.min.js"></script>
+	<style>
+		label.error {
+			color:red;
+		}
+		span.answer{
+			padding: 15px;
+			margin:0.2rem;
+			border-style: solid;
+			border-radius: 1rem;
+			border-width:2px;
+			border-color:#ccff66;
+			background-color: #ddff99;
+			width: 100%;
+
+		}
+	</style>
 	<script>window.checkAndChangeSvgColor = function (c) { try { var a = document.getElementById(c); if (a) { c = [["border", "borderColor"], ["outline", "outlineColor"], ["color", "color"]]; for (var h, b, d, f = [], e = 0, m = c.length; e < m; e++)if (h = window.getComputedStyle(a)[c[e][1]].replace(/\s/g, "").match(/^rgb[a]?\(([0-9]{1,3}),([0-9]{1,3}),([0-9]{1,3})/i)) { b = ""; for (var g = 1; 3 >= g; g++)b += ("0" + parseInt(h[g], 10).toString(16)).slice(-2); "0" === b.charAt(0) && (d = parseInt(b.substr(0, 2), 16), d = Math.max(16, d), b = d.toString(16) + b.slice(-4)); f.push(c[e][0] + "=" + b) } if (f.length) { var k = a.getAttribute("data-src"), l = k + (0 > k.indexOf("?") ? "?" : "&") + f.join("&"); a.src != l && (a.src = l, a.outerHTML = a.outerHTML) } } } catch (n) { } };</script>
 </head>
 
@@ -122,145 +140,89 @@
 								<div class="section-bg-layer section-bg-overlay"></div>
 							</div>
 							<div class="section-inner">
-								<div class="content cf wnd-no-cols">
-									<div>
-										<div class="text cf design-01">
-											<div class="text-content">
-												<h3>Initial Protein</h3>
-											</div>
-										</div>
-										<div class="form block cf typo-05">
-											<form action="" method="post">
+								<div class="content cf">
+									<div class="form block cf typo-04">
+											<form id="request" name="request" method="post">
 
+												<fieldset class="form-fieldset" id="seqField">
+													<div>
+														<div
+															class="form-input form-textarea cf wnd-form-field wnd-required">
+															<label for="sequence"><span
+																	class="inline-text">
+																	<span>Protein sequence</span>
+																</span></label>
+															<textarea id="sequence"
+																name="sequence" required maxlength="3000"></textarea>
+														</div>
+													</div>
+													<div style="padding-left:50%;">
+														<a href="#" id="usePDB">Use PDB Identifier</a>
+													</div>
+												</fieldset>
+												<fieldset class="form-fieldset" id="pdbField" style="display: none;">
+													<div>
+														<div
+															class="form-input form-textarea cf wnd-form-field wnd-required">
+															<label for="pdb"><span
+																	class="inline-text">
+																	<span>Protein PDB ID</span>
+																</span></label>
+															<input type="text" id="pdb"
+																name="pdb" maxlength="15">
+														</div>
+													</div>
+													<div style="padding-left:50%;">
+														<a href="#" id="useSEQ">Use sequence</a>
+													</div>
+												</fieldset>
+												<hr>
 												<fieldset class="form-fieldset">
 													<div>
 														<div
 															class="form-input form-text cf wnd-form-field wnd-required">
-															<label for="field-wnd_ShortTextField_326755"><span
+															<label for="position"><span
 																	class="inline-text">
-																	<span>protein code</span>
+																	<span>Position</span>
 																</span></label>
-															<input id="field-wnd_ShortTextField_326755"
-																name="wnd_ShortTextField_326755" required value=""
-																type="text" maxlength="150">
+															<input id="position"
+																name="position" disabled required
+																type="text" maxlength="10">
 														</div>
 													</div>
 												</fieldset>
+												<fieldset class="form-fieldset">
+													<div>
+														<div
+															class="form-input form-text cf wnd-form-field wnd-required">
+															<label for="mutation"><span
+																	class="inline-text">
+																	<span>Mutation</span>
+																</span></label>
+															<input id="mutation"
+																name="mutation" required
+																type="text" maxlength="1">
+														</div>
+													</div>
+												</fieldset>
+
+												<div class="prot_info">
+													<p>Sequence length: <span id="seq_length">0</span></p>
+													<p>Wildtype aminoacid: <span id="seq_wild">_</span></p>
+													<p>Position: <span id="seq_pos">0</span></p>
+													<p>Mutation: <span id="seq_mut">_</span></p>
+												</div>
+
+												 <input type="hidden" id="wildtype" name="wiltype" value="">
 
 												<div class="form-submit cf button-01">
 													<button type="submit" name="send" value="wnd_FormBlock_188335">
-														<span class="text">Submit</span>
+														<span class="text">Add to processing</span>
 													</button>
 												</div>
-
 											</form>
-
-
 										</div>
-										<div class="text cf design-01">
-											<div class="text-content">
-												<h3>Mutation&nbsp;</h3>
-											</div>
-										</div>
-										<div class="form block cf typo-05">
-											<form action="" method="post">
-
-												<fieldset class="form-fieldset">
-													<div>
-														<div
-															class="form-input form-text cf wnd-form-field wnd-required">
-															<label for="field-wnd_ShortTextField_569375"><span
-																	class="inline-text">
-																	<span>amino acid that would like to change</span>
-																</span></label>
-															<input id="field-wnd_ShortTextField_569375"
-																name="wnd_ShortTextField_569375" required value=""
-																type="text" maxlength="150">
-														</div>
-													</div>
-												</fieldset>
-
-												<div class="form-submit cf button-01">
-													<button type="submit" name="send" value="wnd_FormBlock_92963">
-														<span class="text">Submit</span>
-													</button>
-												</div>
-
-											</form>
-
-
-										</div>
-										<div class="form block cf typo-05">
-											<form action="" method="post">
-
-												<fieldset class="form-fieldset">
-													<div>
-														<div
-															class="form-input form-text cf wnd-form-field wnd-required">
-															<label for="field-wnd_ShortTextField_821054"><span
-																	class="inline-text">
-																	<span>location</span>
-																</span></label>
-															<input id="field-wnd_ShortTextField_821054"
-																name="wnd_ShortTextField_821054" required value=""
-																type="text" maxlength="150">
-														</div>
-													</div>
-												</fieldset>
-
-												<div class="form-submit cf button-01">
-													<button type="submit" name="send" value="wnd_FormBlock_679601">
-														<span class="text">Submit</span>
-													</button>
-												</div>
-
-											</form>
-
-
-										</div>
-										<div class="form block cf typo-05">
-											<form action="" method="post">
-
-												<fieldset class="form-fieldset">
-													<div>
-														<div
-															class="form-input form-text cf wnd-form-field wnd-required">
-															<label for="field-wnd_ShortTextField_242222"><span
-																	class="inline-text">
-																	<span>new amino acid</span>
-																</span></label>
-															<input id="field-wnd_ShortTextField_242222"
-																name="wnd_ShortTextField_242222" required value=""
-																type="text" maxlength="150">
-														</div>
-													</div>
-												</fieldset>
-
-												<div class="form-submit cf button-01">
-													<button type="submit" name="send" value="wnd_FormBlock_604293">
-														<span class="text">Submit</span>
-													</button>
-												</div>
-
-											</form>
-
-
-										</div>
-										<div class="hr-line block design-01">
-											<hr>
-										</div>
-										<div class="button block typo-05 button-01">
-											<div class="button-content">
-												<a href="http://www.aipredictingproteinstability.co" rel="nofollow"
-													target="_blank">
-													<span class="button-text">Calculate&nbsp;ΔΔG</span>
-												</a>
-											</div>
-										</div>
-										<div class="text cf design-01">
-											<div class="text-content"></div>
-										</div>
-									</div>
+								</div>
 								</div>
 							</div>
 						</section>
@@ -307,3 +269,126 @@
 		</div>
 
 	</div>
+{{!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script> --}}
+
+<script>
+	$( document ).ready(function() {
+		$(document).on('click','#usePDB', ()=>{
+			$('#seqField').hide();
+			$('#pdbField').show();
+		});
+		$(document).on('click','#useSEQ', ()=>{
+			$('#seqField').show();
+			$('#pdbField').hide();
+		});
+
+		$.validator.addMethod(
+				"regex",
+				function(value, element, regexp) {
+					var re = new RegExp(regexp);
+					return this.optional(element) || re.test(value);
+				},
+				"Please check your input."
+		);
+
+		let seqLength = 0;
+		$(document).on('change','textarea#sequence', ()=>{
+			const seq = $('#sequence');
+			seqLength = seq.val().length;
+			const addRule = {
+				position: {
+					required: true,
+					regex: "^[0-9]+$",
+					max: seqLength,
+					min: 1
+				}	
+			}
+			if (seq.val() == "") {
+				removeRules(addRule);
+				$('#position').prop('disabled', true);
+			} else {        
+				addRules(addRule);
+				$('#position').prop('disabled', false);
+				$('#seq_length').html(seqLength);
+			}
+		});
+
+		$(document).on('change','input#position', ()=>{
+			const pos = $('input#position').val();
+			if(pos != ""){
+				let seqBody = $('#sequence').val();
+				$('#seq_wild').html(seqBody[pos-1]);
+				$('#wildtype').val(seqBody[pos-1]);
+				$('#seq_pos').html(pos);
+			}
+		});
+
+		$(document).on('change','input#mutation', ()=>{
+			const mut = $('input#mutation').val();
+			if(mut != ""){
+				$('#seq_mut').html(mut);
+			}
+		});
+
+		$("form#request").validate({
+			rules: {
+				sequence: {
+					required: true,
+					regex: "^[a-zA-Z]+$",
+					minlength: 6
+				},
+				mutation: {
+					required: true,
+					regex: "^[a-zA-Z]+$"
+				}
+			},
+			messages: {
+				sequence: {
+					required: "Please specify protein sequence",
+					regex: "Invalid sequence"
+				},
+				mutation: {
+					regex: "Mutation must be a letter"
+				},
+				position: {
+					regex: "Position consists of only numbers",
+					max: "Position is wrong (> length of sequence)"
+				}
+			}
+		});
+
+		function addRules(rulesObj){
+			for (var item in rulesObj){
+			$('#'+item).rules('add',rulesObj[item]);  
+			} 
+		}
+
+		function removeRules(rulesObj){
+			for (var item in rulesObj){
+			$('#'+item).rules('remove');  
+			} 
+		}
+
+		$("form#request").on("submit", (e)=>{
+			e.preventDefault();
+			const formObj = $("form#request");
+			$.post( "/analysis", formObj.serialize())
+			.done(function(data) {
+				$(".content").append(`Result: <span class="answer">${data.answer}</span>`);
+			})
+			.fail(function() {
+				alert( "error" );
+			})
+		});
+
+		$.get( "/ping").done(function( data ) {
+			if(data.answer) $( ".prot_info" ).append(`<p>Server: <span style="color:green">up</span></p>`);
+			else {
+				$( ".prot_info" ).append(`<p>Server: <span style="color:red">down</span></p>`);
+				$(':input[type="submit"]').prop('disabled', true);
+			}
+		});
+	});
+</script>
+</body>
