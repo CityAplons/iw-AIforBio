@@ -16,7 +16,7 @@ def send():
 		if secret == "SKOLTECH":
 			if sequence[int(position)-1] == wildtype:
 				result = predictor.prediction(sequence,wildtype,position,mutation,ph,temp)
-				return jsonify(answer=result)
+				return jsonify(result)
 			else:
 				return jsonify(answer='Bad sequence or position')
 		else:
