@@ -6,6 +6,8 @@ exports.signin = function(req, res) {
 }
 exports.analysis = function(req, res) {
     res.render('analysis',{
+        name: req.user.name,
+        surname: req.user.surname,
         username: req.user.username,
         id: req.user.id
     });

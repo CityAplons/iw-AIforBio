@@ -7,7 +7,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<title>Analysis :: Ai-for-predicting-3d-protein-structure-stability9</title>
+	<title>Analysis :: Protein Analytics</title>
 	<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
 	<meta name="msapplication-tap-highlight" content="no">
 	<link href="styles.css" rel="stylesheet">
@@ -19,10 +19,10 @@
 	<meta name="format-detection" content="telephone=no">
 
 	<meta property="og:url" content="http://protanalytics.xyz/services/">
-	<meta property="og:title" content="Analysis :: Ai-for-predicting-3d-protein-structure-stability9">
+	<meta property="og:title" content="Analysis :: Protein Analytics">
 	<meta property="og:type" content="article">
 	<meta property="og:description" content="Initial Protein">
-	<meta property="og:site_name" content="Ai-for-predicting-3d-protein-structure-stability9">
+	<meta property="og:site_name" content="Protein Analytics">
 	<meta property="og:image" content="/bckg2.png">
 	<meta property="og:article:published_time" content="2019-09-16T00:00:00+0200">
 	<meta name="robots" content="noindex,nofollow">
@@ -133,6 +133,7 @@
 							</div>
 						</div>
 						<section class="section default-01 default s-white">
+							<pre id="user" data-id="{{id}}">{{username}} : {{name}} {{surname}}</pre>
 							<div class="section-bg">
 								<div class="section-bg-layer">
 
@@ -203,6 +204,26 @@
 																name="mutation" required
 																type="text" maxlength="1">
 														</div>
+														<div
+															class="form-input form-text cf wnd-form-field wnd-required">
+															<label for="temp"><span
+																	class="inline-text">
+																	<span>Temperature</span>
+																</span></label>
+															<input id="temp"
+																name="temp" required
+																type="text">
+														</div>
+														<div
+															class="form-input form-text cf wnd-form-field wnd-required">
+															<label for="ph"><span
+																	class="inline-text">
+																	<span>Acidity</span>
+																</span></label>
+															<input id="ph"
+																name="ph" required
+																type="text">
+														</div>
 													</div>
 												</fieldset>
 
@@ -223,6 +244,20 @@
 											</form>
 										</div>
 								</div>
+								<table id="data" class="display" style="width:100%; margin:20px;">
+								<thead>
+									<tr>
+										<th>Time</th>
+										<th>Sequence</th>
+										<th>Wildtype</th>
+										<th>Position</th>
+										<th>Mutation</th>
+										<th>Temperature</th>
+										<th>Acidity</th>
+										<th>ddG</th>
+									</tr>
+								</thead>
+							</table>
 								</div>
 							</div>
 						</section>
@@ -269,11 +304,12 @@
 		</div>
 
 	</div>
-{{!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
-<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script> --}}
+<link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 
 <script>
 	$( document ).ready(function() {
+		const user = $('#user').data('id');
 		$(document).on('click','#usePDB', ()=>{
 			$('#seqField').hide();
 			$('#pdbField').show();
@@ -318,8 +354,8 @@
 			const pos = $('input#position').val();
 			if(pos != ""){
 				let seqBody = $('#sequence').val();
-				$('#seq_wild').html(seqBody[pos-1]);
-				$('#wildtype').val(seqBody[pos-1]);
+				$('#seq_wild').html(seqBody[pos-1].toUpperCase());
+				$('#wildtype').val(seqBody[pos-1].toUpperCase());
 				$('#seq_pos').html(pos);
 			}
 		});
@@ -327,7 +363,7 @@
 		$(document).on('change','input#mutation', ()=>{
 			const mut = $('input#mutation').val();
 			if(mut != ""){
-				$('#seq_mut').html(mut);
+				$('#seq_mut').html(mut.toUpperCase());
 			}
 		});
 
@@ -341,6 +377,14 @@
 				mutation: {
 					required: true,
 					regex: "^[a-zA-Z]+$"
+				},
+				ph: {
+					required: true,
+					regex: "^\\d+(\\.\\d+)*$"
+				},
+				temp: {
+					required: true,
+					regex: "^\\d+(\\.\\d+)*$"
 				}
 			},
 			messages: {
@@ -389,6 +433,12 @@
 				$(':input[type="submit"]').prop('disabled', true);
 			}
 		});
+/*
+		$('#data').DataTable( {
+			"processing": true,
+			"serverSide": true,
+			"ajax": `/${user}/datasource`
+		});*/
 	});
 </script>
 </body>

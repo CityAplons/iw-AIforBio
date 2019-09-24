@@ -9,6 +9,15 @@ const http = require('http');
 
 const app = express();
 
+const fs = require('fs');
+const util = require('util');
+let log_file = fs.createWriteStream(__dirname + '/debug.log', {flags : 'w'});
+let log_stdout = process.stdout;
+console.log = function(d) { //
+  log_file.write(util.format(d) + '\n');
+  log_stdout.write(util.format(d) + '\n');
+};
+
 var server = http.createServer(app);
 app.set('port', 3000);
 
@@ -51,6 +60,10 @@ app.use('/', coreRouter);
 const authRouter = require('./v1/auth');
 app.use('/', authRouter);
 
+//Util router
+const utilRouter = require('./v1/utils');
+app.use('/', utilRouter);
+
 //Database init
 //Models
 var models = require("./models");
@@ -63,7 +76,7 @@ models.sequelize.sync().then(function() {
 });
 
 //load passport strategies
-require('./config/passport/passport.js')(passport, models.user);
+require('./config/passport/passport.js')(passport, models.User);
 
 //server init
 app.listen(app.get('port'), () => {

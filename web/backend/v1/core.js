@@ -12,10 +12,12 @@ router.post('/analysis', (req, res) => {
     if(req.user){
         axios.post(`${addr}/sendData`, {
             secret: 'SKOLTECH',
-            sequence: req.body.sequence,
+            sequence: req.body.sequence.toUpperCase(),
             position: req.body.position,
-            wildtype: req.body.sequence[req.body.position-1],
-            mutation: req.body.mutation,
+            wildtype: req.body.sequence[req.body.position-1].toUpperCase(),
+            mutation: req.body.mutation.toUpperCase(),
+            ph: req.body.ph,
+            temp: req.body.temp,
           })
         .then(function (response) {
             res.status(200).send(response.data);
