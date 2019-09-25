@@ -26,4 +26,23 @@ router.get(`/:user_id/datasource`, (req, res) => {
       });
 });
 
+router.post(`/:user_id/setdata`, (req, res) => {
+    db.Data1.create({ 
+      sequence: req.body.sequence.toUpperCase(),
+      position: req.body.position,
+      wildtype: req.body.sequence[req.body.position-1].toUpperCase(),
+      mutation: req.body.mutation.toUpperCase(),
+      ph: req.body.ph,
+      temp: req.body.temp,
+      ddg: req.body.ddg,
+      user_id: req.user.id
+    }, {
+      include: [ db.User ]
+    })
+    .then((result) => {
+      // result is response for datatables
+      res.send(JSON.stringify({answer: 'ok'}));
+    });
+});
+
 module.exports = router;

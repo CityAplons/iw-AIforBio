@@ -34,15 +34,12 @@
 			color:red;
 		}
 		span.answer{
-			padding: 15px;
-			margin:0.2rem;
+			padding: 5px;
+			margin:1rem;
 			border-style: solid;
 			border-radius: 1rem;
 			border-width:2px;
-			border-color:#ccff66;
-			background-color: #ddff99;
-			width: 100%;
-
+			border-color:#fff4;
 		}
 	</style>
 	<script>window.checkAndChangeSvgColor = function (c) { try { var a = document.getElementById(c); if (a) { c = [["border", "borderColor"], ["outline", "outlineColor"], ["color", "color"]]; for (var h, b, d, f = [], e = 0, m = c.length; e < m; e++)if (h = window.getComputedStyle(a)[c[e][1]].replace(/\s/g, "").match(/^rgb[a]?\(([0-9]{1,3}),([0-9]{1,3}),([0-9]{1,3})/i)) { b = ""; for (var g = 1; 3 >= g; g++)b += ("0" + parseInt(h[g], 10).toString(16)).slice(-2); "0" === b.charAt(0) && (d = parseInt(b.substr(0, 2), 16), d = Math.max(16, d), b = d.toString(16) + b.slice(-4)); f.push(c[e][0] + "=" + b) } if (f.length) { var k = a.getAttribute("data-src"), l = k + (0 > k.indexOf("?") ? "?" : "&") + f.join("&"); a.src != l && (a.src = l, a.outerHTML = a.outerHTML) } } } catch (n) { } };</script>
@@ -157,9 +154,9 @@
 																name="sequence" required maxlength="3000"></textarea>
 														</div>
 													</div>
-													<div style="padding-left:50%;">
+													{{!-- <div style="padding-left:50%;">
 														<a href="#" id="usePDB">Use PDB Identifier</a>
-													</div>
+													</div> --}}
 												</fieldset>
 												<fieldset class="form-fieldset" id="pdbField" style="display: none;">
 													<div>
@@ -242,6 +239,7 @@
 													</button>
 												</div>
 											</form>
+											<span class="answer"></span>
 										</div>
 								</div>
 								<table id="data" class="display" style="width:100%; margin:20px;">
@@ -255,6 +253,7 @@
 										<th>Temperature</th>
 										<th>Acidity</th>
 										<th>ddG</th>
+										<th>?</th>
 									</tr>
 								</thead>
 							</table>
@@ -306,6 +305,8 @@
 	</div>
 <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.css">
 <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>
+
 
 <script>
 	$( document ).ready(function() {
@@ -416,14 +417,40 @@
 
 		$("form#request").on("submit", (e)=>{
 			e.preventDefault();
+			$(".answer").empty();
 			const formObj = $("form#request");
-			$.post( "/analysis", formObj.serialize())
-			.done(function(data) {
-				$(".content").append(`Result: <span class="answer">${data.answer}</span>`);
-			})
-			.fail(function() {
-				alert( "error" );
-			})
+			if($('#mutation').val().toUpperCase() == "X"){
+				const dict = 'ABCDEFGHIJKLMNOPQRSTUVWYZ'.split('');
+				dict.forEach(function(element) {
+					$('#mutation').val(element);
+					$.post( "/analysis", formObj.serialize())
+					.done(function(load) {
+						let r = JSON.parse(load);
+						console.log(r)
+						$(".answer").append(`${ r.data.mutation}: deltaDeltaG: ${r.answer.ddG}, ${r.answer.stability}<br>`);
+						let send = r.data;
+						send.ddg = r.answer.ddG;
+						$.post( `/${user}/setdata`, send).done(function() {
+							table.ajax.reload();
+						});
+					})
+					.fail(function() {
+						alert( "error" );
+					})
+				});
+			} else {
+				$.post( "/analysis", formObj.serialize())
+				.done(function(data) {
+					$(".answer").append(`deltaDeltaG: ${data.ddG}, ${data.stability}`);
+					const answer = `${formObj.serialize()}&ddg=${data.ddG}`;
+					$.post( `/${user}/setdata`, answer).done(function(data) {
+						table.ajax.reload();
+					});
+				})
+				.fail(function() {
+					alert( "error" );
+				})
+			}
 		});
 
 		$.get( "/ping").done(function( data ) {
@@ -433,12 +460,27 @@
 				$(':input[type="submit"]').prop('disabled', true);
 			}
 		});
-/*
-		$('#data').DataTable( {
+
+		let table = $('#data').DataTable( {
 			"processing": true,
 			"serverSide": true,
-			"ajax": `/${user}/datasource`
-		});*/
+			"ajax": `/${user}/datasource`,
+			"order": [[ 0, "desc" ]],
+			"columns": [
+				{ "data": "createdAt" },
+				{ "data": "sequence" },
+				{ "data": "wildtype" },
+				{ "data": "position" },
+				{ "data": "mutation" },
+				{ "data": "temp" },
+				{ "data": "ph" },
+				{ "data": "ddg" },
+				{ "data": "approved" }
+			],
+			columnDefs:[{targets:0, render:function(data){
+				return moment(data).format('MMMM Do YYYY');
+			}}]
+		});
 	});
 </script>
 </body>

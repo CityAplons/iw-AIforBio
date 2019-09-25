@@ -20,7 +20,7 @@ router.post('/analysis', (req, res) => {
             temp: req.body.temp,
           })
         .then(function (response) {
-            res.status(200).send(response.data);
+            res.status(200).send(JSON.stringify({answer: response.data, data: req.body}));
           })
         .catch(function (error) {
             res.status(200).send(JSON.stringify({"error": error.message}));
