@@ -23,7 +23,7 @@ def neighbour(sequence,position,shift):
 def prediction(sequence,current,position,mutation,ph = 8.0,temp=37.):
     number_neighbours = 5
     columns = ['sequence','current','position','mutation','PH','Temp']
-    data = [sequence,current,position,mutation,ph,temp]
+    data = [sequence,current,int(position)-1,mutation,float(ph),float(temp)]
     test_data = {columns[i]:[data[i]] for i in range(len(columns))}
     test_data = pd.DataFrame(test_data)
     for i in range(1,number_neighbours+1):
