@@ -151,7 +151,7 @@
 																	<span>Protein sequence</span>
 																</span></label>
 															<textarea id="sequence"
-																name="sequence" required maxlength="3000"></textarea>
+																name="sequence" required maxlength="10000"></textarea>
 														</div>
 													</div>
 													{{!-- <div style="padding-left:50%;">
@@ -234,7 +234,7 @@
 												 <input type="hidden" id="wildtype" name="wiltype" value="">
 
 												<div class="form-submit cf button-01">
-													<button type="submit" name="send" value="wnd_FormBlock_188335">
+													<button type="submit" id="submit" name="send" value="wnd_FormBlock_188335">
 														<span class="text">Add to processing</span>
 													</button>
 												</div>
@@ -246,7 +246,6 @@
 								<thead>
 									<tr>
 										<th>Time</th>
-										<th>Sequence</th>
 										<th>Wildtype</th>
 										<th>Position</th>
 										<th>Mutation</th>
@@ -254,6 +253,7 @@
 										<th>Acidity</th>
 										<th>ddG</th>
 										<th>?</th>
+										<th>Sequence</th>
 									</tr>
 								</thead>
 							</table>
@@ -323,7 +323,7 @@
 		$.validator.addMethod(
 				"regex",
 				function(value, element, regexp) {
-					var re = new RegExp(regexp);
+					var re = new RegExp(regexp,'i');
 					return this.optional(element) || re.test(value);
 				},
 				"Please check your input."
@@ -348,6 +348,12 @@
 				addRules(addRule);
 				$('#position').prop('disabled', false);
 				$('#seq_length').html(seqLength);
+				const pos = $('input#position').val();
+				if(pos != ""){
+					$('#seq_wild').html(seq.val()[pos-1].toUpperCase());
+					$('#wildtype').val(seq.val()[pos-1].toUpperCase());
+					$('#seq_pos').html(pos);
+				}
 			}
 		});
 
@@ -372,12 +378,12 @@
 			rules: {
 				sequence: {
 					required: true,
-					regex: "^[a-zA-Z]+$",
+					regex: "^[ACDEFGHIKLMNPQRSTVWYX]+$",
 					minlength: 6
 				},
 				mutation: {
 					required: true,
-					regex: "^[a-zA-Z]+$"
+					regex: "^[ACDEFGHIKLMNPQRSTVWYX]+$"
 				},
 				ph: {
 					required: true,
@@ -418,19 +424,20 @@
 		$("form#request").on("submit", (e)=>{
 			e.preventDefault();
 			$(".answer").empty();
+			$('#submit').prop('disabled', true);
 			const formObj = $("form#request");
 			if($('#mutation').val().toUpperCase() == "X"){
-				const dict = 'ABCDEFGHIJKLMNOPQRSTUVWYZ'.split('');
+				const dict = 'ACDEFGHIKLMNPQRSTVWY'.split('');
 				dict.forEach(function(element) {
 					$('#mutation').val(element);
 					$.post( "/analysis", formObj.serialize())
 					.done(function(load) {
 						let r = JSON.parse(load);
-						console.log(r)
 						$(".answer").append(`${ r.data.mutation}: deltaDeltaG: ${r.answer.ddG}, ${r.answer.stability}<br>`);
 						let send = r.data;
 						send.ddg = r.answer.ddG;
 						$.post( `/${user}/setdata`, send).done(function() {
+							$('#submit').prop('disabled', false);
 							table.ajax.reload();
 						});
 					})
@@ -441,9 +448,11 @@
 			} else {
 				$.post( "/analysis", formObj.serialize())
 				.done(function(data) {
-					$(".answer").append(`deltaDeltaG: ${data.ddG}, ${data.stability}`);
-					const answer = `${formObj.serialize()}&ddg=${data.ddG}`;
+					const r = JSON.parse(data);
+					$(".answer").append(`deltaDeltaG: ${r.answer.ddG}, ${r.answer.stability}`);
+					const answer = `${formObj.serialize()}&ddg=${r.answer.ddG}`;
 					$.post( `/${user}/setdata`, answer).done(function(data) {
+						$('#submit').prop('disabled', false);
 						table.ajax.reload();
 					});
 				})
@@ -464,22 +473,26 @@
 		let table = $('#data').DataTable( {
 			"processing": true,
 			"serverSide": true,
+			'scrollX': true,
+			'scrollCollapse': true,
+			'autoWidth': true,
 			"ajax": `/${user}/datasource`,
 			"order": [[ 0, "desc" ]],
 			"columns": [
 				{ "data": "createdAt" },
-				{ "data": "sequence" },
 				{ "data": "wildtype" },
 				{ "data": "position" },
 				{ "data": "mutation" },
 				{ "data": "temp" },
 				{ "data": "ph" },
 				{ "data": "ddg" },
-				{ "data": "approved" }
+				{ "data": "approved" },
+				{ "data": "sequence" }
 			],
 			columnDefs:[{targets:0, render:function(data){
-				return moment(data).format('MMMM Do YYYY');
-			}}]
+				return moment(data).format('H:mm a D.M.YY');
+			}},
+			{ "width": "400px", "targets": [8] }]
 		});
 	});
 </script>
